@@ -3,6 +3,8 @@
     justify-content: center; 
     color: #5b5151;
     font-size: 14px;
+    position: relative;
+    margin: 50px;
 }
 
 .todoLayout{
@@ -17,7 +19,7 @@
 }
 
 .todoTop{
-    position: fixed;
+    position: absolute;
     width: calc(100% -10px);
     height: 104px;
     max-width: 700px;
@@ -77,7 +79,7 @@
 
 .todoItem{
     width: calc(100% - 50px);
-    display: flex;
+    /* display: flex; */
     align-items: center;
     padding: 12px 0px 12px 0px;
     margin-bottom: 4px;
@@ -89,6 +91,7 @@
     align-items: center;
     width: 100%;
     cursor: pointer;
+    margin-bottom: 12px;
 }
 
 .checkIcon{
@@ -109,11 +112,13 @@
     font-size: 18px;
     height: 20px;
     width: 20px;
-    margin-left: 15px;
+    margin-left: 200px;
+    margin-bottom: 12px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #aaa;
     cursor: pointer;
+    position: absolute;
 }
