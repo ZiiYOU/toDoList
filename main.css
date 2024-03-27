@@ -15,7 +15,8 @@
     flex-direction: column;
     align-items: center;
     border: 1px solid #aaa;
-    box-shadow: 15px 15px #aaa;
+    border-radius: 10px;
+    box-shadow: 20px 20px #f2eded;
 }
 
 .todoTop{
@@ -71,34 +72,44 @@
 .listLayout{
     padding: 110px 10px 10px 10px;
     width: calc(100% - 10px);
+    box-sizing: border-box;
+}
+
+.list{
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-sizing: border-box;
 }
 
 .todoItem{
     width: calc(100% - 50px);
-    /* display: flex; */
-    align-items: center;
-    padding: 12px 0px 12px 0px;
-    margin-bottom: 4px;
-    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.todoCheckBox{
+.todoItem .todoCheckBox{
     display: flex;
     align-items: center;
     width: 100%;
-    cursor: pointer;
-    margin-bottom: 20px;
 }
 
-.checkBox{
+.todoItem .todoCheckBox .item{
+    white-space: normal;    /* 텍스트 자동 줄바꿈 처리 */
+    padding: 0px 20px 0px 0px;
+    
+}
+
+.todoItem .todoCheckBox .item.done{
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.todoItem .todoCheckBox .checkBox{
     display: flex;
     position: relative;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 17px;
     min-width: 17px;
     height: 17px;
@@ -108,11 +119,12 @@
 
 }
 
-.checkBox .checkIcon{
+.todoItem .todoCheckBox .checkBox .checkIcon{
     display: none;
 }
 
-.checkBox .checkIcon.done{
+.todoItem .todoCheckBox .checkBox .checkIcon.done{
+    content: '';
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,21 +132,17 @@
     font-weight: 600;
     position: absolute;
     width: 100%;
-    margin: auto;
 }
 
 
-
-.deleteBox{
-    font-size: 18px;
-    height: 20px;
-    width: 20px;
+.todoItem .deleteBox{
+    content: '';
+    font-size: 15px;
+    height: 17px;
+    width: 17px;
     margin-left: 200px;
     margin-bottom: 12px;
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #aaa;
     cursor: pointer;
     position: absolute;
